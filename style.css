@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 a {
     text-decoration: none;
     color: inherit;
@@ -38,3 +39,140 @@ a {
     background: rgba(255, 255, 255, 0.2);
     cursor: pointer;
 }
+=======
+  /* Contenuto principale */
+  .main-content {
+    margin-top: 120px; /* Spazio per l'header e la navbar */
+    padding: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-content h1 {
+    font-family: 'SimSun', serif;
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #a31723;
+}
+
+.section {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section-text {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.section-text h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #9b111c;
+}
+
+.section-text p {
+    font-size: 18px;
+    color: #eeeeee;
+}
+
+.section-image {
+    flex: 0 0 300px;
+    margin-left: 20px;
+}
+
+.section-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Sezione Reliquie Sacre con immagini sotto il testo */
+.section.reliquie {
+    flex-direction: column; /* Disposizione in colonna */
+   
+}
+
+.reliquie-images {
+    display: flex;
+    gap: 50px; /* Spazio tra le immagini */
+    margin-top: 20px;
+    flex-wrap: wrap; /* Le immagini vanno a capo su schermi piccoli */
+    justify-content: center; /* Centra le immagini orizzontalmente */
+    border-radius: 50%;
+}
+
+.reliquie-images img {
+    width: 170px; /* Larghezza fissa per le immagini */
+    height: auto; /* Mantiene le proporzioni dell'immagine */
+    border-radius: 50%;
+    border-radius: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transizione per l'ingrandimento e la luminosità */
+}
+.reliquie-images img:hover {
+transform: scale(1.1); /* Ingrandimento dell'immagine */
+box-shadow: 20px 9px 30px rgba(255, 215, 0, 0.6); /* Effetto "splendore" con ombra dorata */
+border-radius: 50%;
+background-image: url('imm/sfondo123.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.reliquie-images .image-container {
+position: relative;
+text-align: center;
+}
+
+.reliquie-images .image-container p {
+display: none; /* Nascondi il testo di default */
+position: absolute;
+bottom: -20px; /* Posiziona il testo sotto l'immagine */
+left: 50%;
+transform: translateX(-50%);
+background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+color: white;
+padding: 5px 10px;
+border-radius: 300px;
+font-size: 14px;
+white-space: nowrap;
+}
+
+.reliquie-images .image-container:hover p {
+display: block; /* Mostra il testo quando si passa il cursore sull'immagine */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .section {
+        flex-direction: column;
+    }
+
+    .section-text {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .section-image {
+        flex: 0 0 auto;
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .section-image img {
+        max-width: 100%;
+    }
+
+    .reliquie-images img {
+        max-width: calc(50% - 10px); /* 2 immagini per riga su schermi piccoli */
+    }
+}
+>>>>>>> feature-servizi
